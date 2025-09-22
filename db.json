@@ -1,0 +1,76 @@
+{
+  "studentData": [
+    {
+      "id": "263b",
+      "username": "nnnff",
+      "mobileno": "7425351414",
+      "email": "yashmeshram239@gmail.com",
+      "dateofBirth": "1212-22-22",
+      "salary": "1425333"
+    },
+    {
+      "username": "ZZZZZZZZZZZZZZZZ",
+      "mobileno": "9898989898",
+      "email": "yashmeshram239@gmail.com",
+      "dateofBirth": "1111-11-11",
+      "salary": "14253",
+      "id": "9125"
+    },
+    {
+      "id": "fbbd",
+      "username": "nfnfn",
+      "mobileno": "7474747474",
+      "email": "yashmeshram239@gmail.com",
+      "dateofBirth": "1211-14-25",
+      "salary": "14253"
+    },
+    {
+      "id": "332e",
+      "username": "bbbb",
+      "mobileno": "7777777777",
+      "email": "yashmeshram239@gmail.com",
+      "dateofBirth": "1414-14-14",
+      "salary": "25555"
+    },
+    {
+      "id": "8ec8",
+      "username": "HHH",
+      "mobileno": "8977094749",
+      "email": "yashhh@gmail.com",
+      "dateofBirth": "9090-90-90",
+      "salary": "9834",
+      "age": "46470"
+    },
+    {
+      "username": "aa",
+      "mobileno": "9696969696",
+      "email": "yashmeshram239@gmail.com",
+      "dateofBirth": "1414-14-14",
+      "salary": "256",
+      "age": "20000",
+      "id": "dea3"
+    },
+    {
+      "username": "hnnh",
+      "mobileno": "8988899888",
+      "email": "yashmeshram239@gmail.com",
+      "dateofBirth": "2025-25-25",
+      "salary": "2255",
+      "age": "102456",
+      "policystart": "2025-01-21",
+      "policyend": "2025-01-29",
+      "id": "5009"
+    },
+    {
+      "id": "0986",
+      "username": "dhdh",
+      "mobileno": "8787878787",
+      "email": "yash@gmail.com",
+      "dateofBirth": "1425-56-36",
+      "salary": "14666",
+      "age": "145555",
+      "policystart": "2025-36-25",
+      "policyend": "2025-36-35"
+    }
+  ]
+}

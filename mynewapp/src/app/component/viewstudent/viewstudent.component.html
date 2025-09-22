@@ -1,0 +1,63 @@
+<input type="text" (input)="seatchvalue($event)">
+<table>
+    <tr>
+        <th>Username</th>
+        <th>Mobileno</th>
+        <th>Email</th>
+        <th>DateofBirth</th>
+        <th>Salary</th>
+        <th>agE</th>
+        <th>Policy start</th>
+        <th>Policy End</th>
+    </tr>
+    <tr *ngFor="let ss of final | async">
+        <td>{{ss.username }}</td>
+        <td>{{ss.mobileno}}</td>
+        <td>{{ss.email}}</td>
+        <td>{{ss.dateofBirth| date:'dd-MMMM-YYYY'}}</td>
+        <td>{{ss.salary | currency:'INR'}}</td>
+        <td>{{ss.age}}</td>
+        <td>{{ss.policystart}}</td>
+        <td>{{ss.policyend}}</td>
+        <td></td>
+        <td><a routerLink="/viewbysid/{{ss.id}}">View</a></td>
+        <td><a routerLink="/viewbysid/{{ss.id}}" (click)="deletes(ss.id)">Delete</a></td>
+        <td><a routerLink="/update/{{ss.id}}">Update</a></td>
+
+    </tr>
+
+</table>
+
+<h1>Ascending</h1>
+<table>
+    <tr *ngFor="let ss of ascorder | async">
+        <td>{{ss.username}}</td>
+        <td>{{ss.mobileno}}</td>
+        <td>{{ss.email}}</td>
+        <td>{{ss.dateofBirth}}</td>
+        <td>{{ss.salary}}</td>
+    </tr>
+</table>
+
+<h1>Decending</h1>
+<table>
+    <tr *ngFor="let ss of desccorder | async">
+        <td>{{ss.username}}</td>
+        <td>{{ss.mobileno}}</td>
+        <td>{{ss.email}}</td>
+        <td>{{ss.dateofBirth}}</td>
+        <td>{{ss.salary}}</td>
+    </tr>
+</table>
+
+
+
+<table>
+    <tr *ngFor="let ss of jsonfilter | async">
+        <td>{{ss.username}}</td>
+        <td>{{ss.mobileno}}</td>
+        <td>{{ss.email}}</td>
+        <td>{{ss.dateofBirth}}</td>
+        <td>{{ss.salary}}</td>
+    </tr>
+</table>

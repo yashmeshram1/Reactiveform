@@ -1,0 +1,147 @@
+<h1>Insert Student Data</h1>
+
+<form [formGroup]="formG" (ngSubmit)="updateStudent()">
+
+    <div>
+        <label for="">Username : </label>
+        <input type="text" formControlName="username">
+        <div
+            *ngIf="formG.get('username')?.['invalid'] && (formG.get('username')?.['dirty'] || formG.get('username')?.['touched'])">
+
+            <small *ngIf="formG.get('username')?.errors?.['required']">
+                Username is Required
+            </small>
+
+            <small *ngIf="formG.get('username')?.errors?.['pattern']">
+                Username is format
+            </small>
+
+        </div>
+    </div>
+    <br>
+    <div>
+        <label for="">Mobile no: </label>
+        <input type="text" formControlName="mobileno">
+        <div
+            *ngIf="formG.get('mobileno')?.['invalid'] && (formG.get('mobileno')?.['dirty'] || formG.get('mobileno')?.['touched'])">
+
+            <small *ngIf="formG.get('mobileno')?.errors?.['required']">
+                Mobile is Required
+            </small>
+
+            <small *ngIf="formG.get('mobileno')?.errors?.['pattern']">
+                Mobile is format
+            </small>
+
+        </div>
+    </div>
+    <br>
+
+    <div>
+        <label for="">Email: </label>
+        <input type="text" formControlName="email">
+        <div
+            *ngIf="formG.get('email')?.['invalid'] && (formG.get('email')?.['dirty'] || formG.get('email')?.['touched'])">
+
+            <small *ngIf="formG.get('email')?.errors?.['required']">
+                Email is Required
+            </small>
+
+            <small *ngIf="formG.get('email')?.errors?.['email']">
+                Email is format
+            </small>
+
+        </div>
+    </div>
+    <br>
+
+    <div>
+        <label for="">Date of Birth: </label>
+        <input type="text" formControlName="dateofBirth">
+        <div
+            *ngIf="formG.get('dateofBirth')?.['invalid'] && (formG.get('dateofBirth')?.['dirty'] || formG.get('dateofBirth')?.['touched'])">
+
+            <small *ngIf="formG.get('dateofBirth')?.errors?.['required']">
+                Date of Birth is Required
+            </small>
+
+            <small *ngIf="formG.get('dateofBirth')?.errors?.['retriveinvalid']">
+                Date of Brith is in format YYYY-DD-MM
+            </small>
+
+        </div>
+    </div>
+
+    <br>
+    <div>
+        <label for="">Salary: </label>
+        <input type="text" formControlName="salary">
+        <div
+            *ngIf="formG.get('salary')?.['invalid'] && (formG.get('salary')?.['dirty'] || formG.get('salary')?.['touched'])">
+
+            <small *ngIf="formG.get('salary')?.errors?.['required']">
+                Salary is Required
+            </small>
+
+            <!-- <small *ngIf="formG.get('salary')?.errors?.['min']">
+                Date of Brith is in format YYYY-DD-MM
+            </small> -->
+
+        </div>
+    </div>
+
+    <div>
+        <label for="">Age: </label>
+        <input type="text" formControlName="age">
+        <div
+            *ngIf="formG.get('age')?.['invalid'] && (formG.get('age')?.['dirty'] || formG.get('age')?.['touched'])">
+
+            <small *ngIf="formG.get('age')?.errors?.['required']">
+                Age is required
+            </small>
+
+            <small *ngIf="formG.get('age')?.errors?.['ischeck']">
+               saalry should me more that 10000
+
+            </small>
+
+        </div>
+    </div>
+
+    
+    <div>
+        <label for="">Start Date </label>
+        <input type="text" formControlName="policystart">
+        <div *ngIf="formG.get('policystart')?.['invalid']  && (formG.get('policystart')?.['touched'] || formG.get('policystart')?.['dirty']  )">
+            <small *ngIf="formG.get('policystart')?.errors?.['required']">
+                Start Date is Required
+            </small>
+            <small *ngIf="formG.get('policystart')?.errors?.['retriveinvalid']">
+                Start Date is in Format
+            </small>
+        </div>
+    </div>
+
+    <div>
+        <label for="">ENd Date </label>
+        <input type="text" formControlName="policyend">
+        <div *ngIf="formG.get('policyend')?.['invalid']  && (formG.get('policyend')?.['touched'] || formG.get('policyend')?.['dirty']  )">
+            <small *ngIf="formG.get('policyend')?.errors?.['required']">
+                End Date is Required
+            </small>
+            <small *ngIf="formG.get('policyend')?.errors?.['retriveinvalid']">
+                End Date is in Format
+            </small>
+        </div>
+    </div>
+    <div *ngIf="formG.errors?.['daterangeinvalid'] && (formG.get('policyend')?.['touched'] || formG.get('policystart')?.['touched'] )">
+
+        End date must be greadter than start date 
+    </div>
+
+
+    <br><br>
+    <input type="submit" [disabled]="formG.invalid" value="Register Student" >
+</form>
+
+<p *ngIf="isValidss" style="color: green;"> Insertion Done</p>
